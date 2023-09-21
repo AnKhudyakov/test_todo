@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-Go to page [Here](https://vercel.com/ankhudyakov/test-todo)
+Go to page [Here](https://test-todo-cyan.vercel.app/)
 
 ### `Run the project on localhost`
 
