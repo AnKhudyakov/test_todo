@@ -1,0 +1,93 @@
+@import "../../../assets/const.scss";
+
+%base {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid $secondary_bg_color;
+  text-align: left;
+  position: relative;
+  order: 0;
+  font-size: 14px;
+  width: 100%;
+  border: transparent;
+  height: 31px;
+  &:hover {
+    cursor: pointer;
+    outline: 1px solid $secondary_bg_color;
+  }
+}
+
+.custom_dropdown {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid $secondary_bg_color;
+  border-radius: 5px;
+}
+
+.select_container {
+  position: relative;
+}
+.selected {
+  @extend %base;
+  color: $font_color;
+}
+
+.selected_light {
+  @extend %base;
+  color: $font_color_light;
+}
+
+.select_container {
+  width: 100%;
+  top: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: background-image 0s linear;
+  transition: background-image 0s linear;
+  order: 1;
+  background-color: $primary_bg_color;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.selected_visible {
+  @extend .selected;
+}
+
+.select {
+  position: absolute;
+  width: 100%;
+  transition: all 7s linear;
+  box-sizing: border-box;
+  border: 1px solid $secondary_bg_color;
+  border-radius: 0 0 5px 5px;
+  background-color: $primary_bg_color;
+  z-index: 999;
+}
+
+.options {
+  @extend .selected;
+  background-image: none;
+  border: none;
+  outline: none;
+  z-index: 999;
+  &:hover {
+    outline: none;
+    background-color: $secondary-bg-color;
+  }
+}
+
+.btns {
+  position: absolute;
+  display: flex;
+  top: -1px;
+  right: -1px;
+  width: 24px;
+  height: 33px;
+}

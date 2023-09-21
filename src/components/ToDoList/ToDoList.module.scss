@@ -1,0 +1,86 @@
+@import "../../assets/const.scss";
+
+%head {
+  height: 5px;
+  width: 440px;
+  position: fixed;
+  top: 14px;
+}
+
+.active {
+  background-color: $accent_color;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.default {
+  &:hover {
+    cursor: pointer;
+    background-color: $secondary_bg_color;
+  }
+}
+
+.table {
+  color: $font_color;
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: 400;
+  table-layout: fixed;
+}
+
+.table_light {
+  color: $font_color_light;
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: 400;
+}
+
+.container {
+  position: relative;
+  width: 450px;
+  height: 320px;
+  overflow: scroll;
+  border: 1px solid $secondary_bg_color;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.head {
+  @extend %head;
+  background-color: $primary_bg_color;
+}
+
+.head_light {
+  @extend %head;
+  background-color: $light_bg_color;
+}
+
+.row {
+  background-color: $secondary_bg_color;
+  position: sticky;
+  top: 0px;
+}
+
+.row_light {
+  background-color: $light_secondary_color;
+  position: sticky;
+  top: 0px;
+}
+
+.column_name {
+  padding: 4px;
+  width: 30%;
+}
+
+.column_age {
+  width: 15%;
+}
+
+.column_sub {
+  width: 30%;
+}
+
+.column_emp {
+  width: 30%;
+}

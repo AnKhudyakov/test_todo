@@ -1,0 +1,95 @@
+@import "../../../assets/const.scss";
+
+%switcher_switch_before {
+  position: absolute;
+  content: "";
+  left: 4px;
+  top: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+%switcher_switch {
+  position: absolute;
+  cursor: pointer;
+  background-color: $accent_color;
+  border-radius: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.2s ease;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 5px;
+}
+
+.switcher {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switcher_light {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switcher input[type="checkbox"] {
+  display: none;
+}
+
+.switcher_light input[type="checkbox"] {
+  display: none;
+}
+
+.switcher .switch {
+  @extend %switcher_switch;
+}
+
+.switcher_light .switch {
+  @extend %switcher_switch;
+}
+
+.switcher .switch::before {
+  @extend %switcher_switch_before;
+  background-color: $primary_bg_color;
+}
+
+.switcher_light .switch::before {
+  @extend %switcher_switch_before;
+  background-color: $light_bg_color;
+}
+
+.switcher input[type="checkbox"]:checked + .switch::before {
+  transform: translateX(18px);
+  background-color: $accent_color;
+}
+.switcher input[type="checkbox"]:checked + .switch {
+  background-color: $secondary_bg_color;
+}
+
+.switcher_light input[type="checkbox"]:checked + .switch::before {
+  transform: translateX(18px);
+  background-color: $light_bg_color;
+}
+.switcher_light input[type="checkbox"]:checked + .switch {
+  background-color: $accent_color;
+}
+
+.label {
+  color: $font_color;
+}
+
+.label_light {
+  color: $font_color_light;
+}

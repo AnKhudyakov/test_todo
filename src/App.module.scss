@@ -1,0 +1,19 @@
+@import "./assets/const.scss";
+%container {
+  display: flex;
+  justify-content: center;
+  max-width: 740px;
+  column-gap: 20px;
+  padding: 13px;
+  margin: 0 auto;
+}
+
+.container {
+  @extend %container;
+  background-color: $primary_bg_color;
+}
+
+.container_light {
+  @extend %container;
+  background-color: $light_bg_color;
+}
